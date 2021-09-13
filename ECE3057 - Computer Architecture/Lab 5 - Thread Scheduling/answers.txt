@@ -1,0 +1,36 @@
+ECE 3057 Spring 2020
+Lab Assignment 4
+
+Name: Alvin Li
+GT Username: ali373
+
+Problem 1B
+----------
+
+1 CPU: 67.6 s
+2 CPUs: 36.5 s
+4 CPUs: 35.0-s
+
+Total execution time decreases with more CPUs, but the relationship between CPU and time is inversely exponential. This is why 1 CPU's difference with 2 CPUs is so much different from 2 to 4's.
+
+
+Problem 2B
+----------
+
+800ms: 136 CS, 67.7 s TET, 329.8 s in READY
+600ms: 159 CS, 67.6 s TET, 312.7 s in READY
+400ms: 201 CS, 67.7 s TET, 301.6 s in READY
+200ms: 360 CS, 67.9 s TET, 292.7 s in READY
+
+This is not always the best choice in a real OS because it takes time to pause a process and push it back onto a ready queue. If a process takes a long time, then this will result in a larger penalty over time. 
+
+
+Problem 3B
+----------
+
+1) It is not realistic to attemp implementing a longest time remaining algorithm because there is no way of accurately predicting how long a process has left before it terminates.
+
+2) R: 285.7 s in READY state
+   L: 390.6 s in READY state
+
+   Round robin is lower because of the preempting processes based on time_slice.
