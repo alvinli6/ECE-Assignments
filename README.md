@@ -1,8 +1,8 @@
 # ECE-Assignments
 C/C++ and SystemVerilog Labs from my undergraduate time at Georgia Tech
 
-ECE2035 is a computer organization course that included assignments in MIPS Assembly and C. Since most of the initial assignments were trivial, I only included the final project, 
-which was a role-playing game in C. The game was implemented on a breadboard using the mBed microcontroller and various components (LCD screen for game display, buttons, accelerometer, etc.).
+ECE2035 is a computer organization course that includes assignments in MIPS Assembly and C. Since most of the initial assignments were trivial, I only included the final project, 
+a role-playing game in C. The game was implemented on a breadboard using the mBed microcontroller and various components (LCD screen for game display, buttons, accelerometer, etc.).
 The game is played as a quest where the player tilts the breadboard to move around and complete tasks.
 
 ECE2036 is an object-oriented C++ course where labs 4 and 6 were also completed using the mBed microcontroller. Lab 4 is a "Lemur Training System" that randomly generated a shape
