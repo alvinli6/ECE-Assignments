@@ -1,5 +1,5 @@
 # ECE-Assignments
-C/C++ and SystemVerilog Labs from my undergraduate time at Georgia Tech
+C/C++, SystemVerilog, and Python Labs from my undergraduate time at Georgia Tech.
 
 ECE2035 is a computer organization course that includes assignments in MIPS Assembly and C. Since most of the initial assignments were trivial, I only included the final project, 
 a role-playing game in C. The game was implemented on a breadboard using the mBed microcontroller and various components (LCD screen for game display, buttons, accelerometer, etc.).
