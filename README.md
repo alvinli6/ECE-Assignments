@@ -15,5 +15,4 @@ were done in Verilog/SystemVerilog, while cache, virtual memory, and thread sche
 ECE4100/6100 is an advanced/high-performance computer architecture course. The labs cover superscalar processors, out-or-order processors, and a multicore hierarchical cache system all
 in C/C++.
 
-ECE6115 is an advanced graduate course on interconnection networks (NoC). The labs use gem5 Garnet2.0 to explore different interconnection topologies, deadlock avoidance, and flow
-control. The code is composed of Python and C/C++.
+ECE6115 is an advanced graduate course on interconnection networks (NoC). The labs use gem5 Garnet2.0 to explore different interconnection topologies, deadlock avoidance techniques, and flow control. The code is composed of Python and C/C++.
