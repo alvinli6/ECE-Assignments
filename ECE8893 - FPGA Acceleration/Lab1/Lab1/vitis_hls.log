@@ -1,0 +1,126 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /tools/software/xilinx/Vitis_HLS/2020.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/software/xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ali373' on host 'ece-linlabsrv01.ece.gatech.edu' (Linux_x86_64 version 3.10.0-1160.49.1.el7.x86_64) on Mon Feb 08 22:20:18 EST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/nethome/ali373/FPGA_ECE8893/Lab1'
+Sourcing Tcl script 'script.tcl'
+INFO: [HLS 200-1510] Running: open_project project_1 
+INFO: [HLS 200-10] Opening project '/nethome/ali373/FPGA_ECE8893/Lab1/project_1'.
+INFO: [HLS 200-1510] Running: set_top matrix_mul 
+INFO: [HLS 200-1510] Running: add_files top.cpp 
+INFO: [HLS 200-10] Adding design file 'top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb main.cpp 
+INFO: [HLS 200-10] Adding test bench file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/nethome/ali373/FPGA_ECE8893/Lab1/project_1/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 239.735 MB.
+INFO: [HLS 200-10] Analyzing design file 'top.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.8 seconds. CPU system time: 0.75 seconds. Elapsed time: 5.7 seconds; current allocated memory: 240.819 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'matrix_mul(ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [200], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300])' (top.cpp:4:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'matrix_mul(ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [200], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300])' (top.cpp:4:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'matrix_mul(ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [200], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300])' (top.cpp:4:0)
+INFO: [HLS 214-115] Multiple burst reads of length 20000 and bit width 32 in loop 'VITIS_LOOP_16_1'(top.cpp:16:22) has been inferred on port 'mem' (top.cpp:16:22)
+INFO: [HLS 214-115] Multiple burst reads of length 60000 and bit width 32 in loop 'VITIS_LOOP_22_3'(top.cpp:22:22) has been inferred on port 'mem' (top.cpp:22:22)
+INFO: [HLS 214-115] Multiple burst writes of length 30000 and bit width 32 in loop 'VITIS_LOOP_54_12'(top.cpp:54:23) has been inferred on port 'mem' (top.cpp:54:23)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_fixeds' into 'matrix_mul(ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [200], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300], ap_fixed<32, 10, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [300])' (top.cpp:56:29)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.31 seconds. CPU system time: 0.79 seconds. Elapsed time: 8.31 seconds; current allocated memory: 242.248 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 242.249 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 245.678 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 248.041 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_17_2' (top.cpp:17) in function 'matrix_mul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (top.cpp:23) in function 'matrix_mul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_31_6' (top.cpp:31) in function 'matrix_mul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_55_13' (top.cpp:55) in function 'matrix_mul' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_38_8' (top.cpp:38) in function 'matrix_mul' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_40_9' (top.cpp:41) in function 'matrix_mul' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_42_10' (top.cpp:42) in function 'matrix_mul' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_45_11' (top.cpp:45) in function 'matrix_mul' completely with a factor of 10.
+INFO: [XFORM 203-102] Partitioning array 'sum_local.V' (top.cpp:41) automatically.
+WARNING: [HLS 200-914] Completely partitioning array 'MatA.V' (top.cpp:11) accessed through non-constant indices on dimension 2 (top.cpp:18:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+Resolution: For help on HLS 200-914 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-914.html
+INFO: [XFORM 203-101] Partitioning array 'MatA.V' (top.cpp:11) in dimension 2 completely.
+WARNING: [HLS 200-914] Completely partitioning array 'MatB.V' (top.cpp:12) accessed through non-constant indices on dimension 1 (top.cpp:24:13), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+Resolution: For help on HLS 200-914 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-914.html
+INFO: [XFORM 203-101] Partitioning array 'MatB.V' (top.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrix_mul' (top.cpp:3)...200 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.84 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.97 seconds; current allocated memory: 284.856 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_16_1' (top.cpp:16:30) in function 'matrix_mul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_22_3' (top.cpp:22:30) in function 'matrix_mul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_30_5' (top.cpp:30:27) in function 'matrix_mul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_37_7' (top.cpp:37:30) in function 'matrix_mul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_54_12' (top.cpp:54:31) in function 'matrix_mul'.
+INFO: [HLS 200-472] Inferring partial write operation for 'MatC.V' (top.cpp:32:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'MatC.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'MatA.V[0]' (top.cpp:18:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'MatB.V[0]' (top.cpp:24:24)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 7.77 seconds. CPU system time: 0.13 seconds. Elapsed time: 7.95 seconds; current allocated memory: 340.132 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_mul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln1116) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln56) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_16_1_VITIS_LOOP_17_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_16_1_VITIS_LOOP_17_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_3_VITIS_LOOP_23_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_22_3_VITIS_LOOP_23_4'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_5_VITIS_LOOP_31_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_30_5_VITIS_LOOP_31_6'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_37_7_VITIS_LOOP_38_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_37_7_VITIS_LOOP_38_8'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_54_12_VITIS_LOOP_55_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_54_12_VITIS_LOOP_55_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.36 seconds. CPU system time: 0.19 seconds. Elapsed time: 6.61 seconds; current allocated memory: 352.570 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 5.94 seconds. CPU system time: 0.15 seconds. Elapsed time: 6.15 seconds; current allocated memory: 367.628 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mul/mem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mul/MatA_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mul/MatB_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_mul/MatC_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_mul' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'MatA_DRAM', 'MatB_DRAM', 'MatC_DRAM' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_10ns_9ns_15_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_54_1_1': 200 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_mul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7.95 seconds. CPU system time: 0.24 seconds. Elapsed time: 8.28 seconds; current allocated memory: 389.759 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'matrix_mul_mul_32s_32s_54_1_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'matrix_mul_MatA_V_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrix_mul_MatB_V_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrix_mul_MatC_V_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 12.87 seconds. CPU system time: 0.66 seconds. Elapsed time: 14.72 seconds; current allocated memory: 451.373 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_mul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_mul.
+INFO: [HLS 200-1603] Design has MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 56.18 seconds. CPU system time: 3.02 seconds. Elapsed time: 61.34 seconds; current allocated memory: 451.918 MB.
+INFO: [HLS 200-112] Total CPU user time: 61.65 seconds. Total CPU system time: 5.22 seconds. Total elapsed time: 66.43 seconds; peak allocated memory: 451.373 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Feb  8 22:21:24 2021...
